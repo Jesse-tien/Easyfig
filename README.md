@@ -81,6 +81,7 @@ Yanliang Zhang, Jingrui Zhang, Yanjie Zhou, Huadong Zhao, Yanpei Cheng, Blockcha
 为例，进行演示。
 
 作者提出了四种模式，利润函数分别为：
+
 $$
 \begin{equation} \pi_r^{NW}=E p_{e} + \frac{k \left(\alpha \delta \left(c_{n} + e_{n} p_{e}\right) - c_{r} - e_{r} p_{e}\right)^{2}}{8 \left(\alpha \delta \left(- \alpha \delta + 1\right) + k\right)^{2}}\tag{1} \end{equation}
 $$

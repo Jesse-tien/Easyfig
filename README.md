@@ -1,37 +1,206 @@
-# Easyfig (原pyfastpaper) 使用说明
+# 无脑简单学术专业绘图工具——Easyfig 使用说明【已更新至3.7.0版本！】
 
-工具安装方式：       
-（1）安装Python，推荐最新版本即可。官网[https://www.python.org/](https://www.python.org/)     
-（2）``Ctrl+R``，输入``cmd``打开命令窗口（黑的），然后在命令窗口内输入：     
-``pip install easyfig``     
-等待安装完成即可。
+[TOC]
 
-## 1. 完全没学过Python的同学，使用界面向导
+## 一、它能干啥？
 
-本工具独创UI界面向导，无需输入代码，即可完成仿真绘图，并自动生成规范的Python代码。启动方式：       
-（1）``Ctrl+R``，输入``cmd``打开命令窗口（黑的）;         
-（2）在命令窗口内输入``easyfig``回车即可。非常简单！
+我开发的这个工具名字叫Easyfig，字面意思“容易画图”，它能干啥？简单说，就是给没有编程基础、商学院管科专业学生使用，用于快速做数值仿真的工具，可以绘制的数值仿真形式包括：
 
-![png](https://pic2.zhimg.com/v2-1485cd2b208fb7d724935237560ffc2b_r.jpg)
+**（1）单个参数的分析**
 
-![png](https://pic2.zhimg.com/v2-70eaa4630d67322160696b6b48792ecf_r.jpg)
+> ![img](https://pica.zhimg.com/80/v2-27b56b2631a5d0c1413a517caee3e211_1440w.png?source=ccfced1a)
+>
+> 图：示例论文 Blockchain adoption and mode selection strategies for remanufacturing supply chain under cap-and-trade policy, Computers & Industrial Engineering, 192, 2024, 110246, https://doi.org/10.1016/j.cie.2024.110246.
 
-![png](https://pic3.zhimg.com/v2-1dfa71269643a7bb22a8968f0842d1d0_r.jpg)
+**（2）两个参数同时分析-最优模式所在区域绘制**
 
-![png](https://pic2.zhimg.com/v2-9bbb00eb2a444d5e467f6b7c8afc75d3_r.jpg)
+> ![img](https://pic1.zhimg.com/80/v2-c81c3830d01d5346c4854d206595ffa6_1440w.png?source=ccfced1a)
+>
+> 图：示例论文 Blockchain adoption and mode selection strategies for remanufacturing supply chain under cap-and-trade policy, Computers & Industrial Engineering, 192, 2024, 110246, https://doi.org/10.1016/j.cie.2024.110246.
 
-点击“保存...”，可以将你填写的画图数据保存下载，以.py或.txt的格式；当想重新画图时，点击“打开...”，选择你之前保存的.py或.txt文件，即可恢复之前的工作。
+**（3）两个参数同时分析-各个区域利润函数之间的详细大小关系**
 
-## 2. 有Python基础的同学，推荐用Jupyter，可以直接编程使用，能够更细致地设置图片细节
+> ![img](https://pic1.zhimg.com/80/v2-67707b0662a9dec78b724d51f485aa26_1440w.png?source=ccfced1a)
+>
+> 图：示例论文 E-retailer information sharing with suppliers online selling mode, Information Sciences 622 (2023) 1252-1272. https://doi.org/10.1016/j.ins.2022.10.094.
 
+**（4）两个参数同时分析-三维图**
+
+> ![img](https://pic1.zhimg.com/80/v2-f979c89165160166d03ca8d2584adc6d_1440w.png?source=ccfced1a)
+>
+> 图：示例论文 Recycling mode selection and carbon emission reduction decisions for a multi-channel closed-loop supply chain of electric vehicle power battery under cap-and-trade policy, Journal of Cleaner Production 375 (2022) 134060.https://doi.org/10.1016/j.jclepro.2022.134060.
+
+---
+
+## 二、如何安装和启动？
+
+第一步：安装Python；第二步：引入我开发的easyfig包。
+
+### 2.1 安装Python【如果电脑已经安装3.8版本以上的Python，则此步跳过】
+
+进入官网[https://www.python.org/](https://www.python.org/) ，点击Downloads，安装最新版本Python即可（例如3.13.1）。
+
+![img](https://picx.zhimg.com/80/v2-38a0157b458b7462ba1aa7392ac191d5_1440w.png?source=ccfced1a)
+
+图：Python官网
+
+### 2.2 安装easyfig
+
+对于Windows用户，按下组合键，Win+R，输入cmd打开命令窗口（黑的），然后在命令窗口内输入： 
+
+> **pip install easyfig==3.7.0**
+
+回车即可，如图所示，等待安装完成。（**注意：1.要联网；2.关掉梯子VPN**）如果中途出现红字，说明因网络原因安装失败，检查网络，并重新做此步即可。
+
+> ![img](https://picx.zhimg.com/80/v2-18168731ddb4910ea2ff20487854e036_1440w.png?source=ccfced1a)
+>
+> 图：Win+R，输入``cmd``回车
+
+### 2.3 启动easyfig
+
+**对于Windows用户，按下组合键“Win+R”，输入“easyfig”直接回车即可！如果是Windows 11，直接在电脑自带的搜索框中搜索“easyfig”也可以打开，非常方便（如图）！还可以建立桌面快捷方式，具体见视频。**
+
+> ![img](https://picx.zhimg.com/80/v2-953e7ea598b69cfe48c6b16cbdafec43_1440w.png?source=ccfced1a)
+>
+> 图：Windows 11 打开easyfig快速方法
+
+下面是视频演示：【或者[点击此处播放](https://vdn3.vzuu.com/HD/ea259b7e-cff6-11ef-b075-6e0de0aa0e6e-v8_f2_t1_ub9zZUlv.mp4?auth_key=1787227745-0-0-754ec0dccac8444121524775997f739e&amp;bu=09fd86c2&amp;c=avc.8.0&amp;disable_local_cache=1&amp;expiration=1787227745&amp;f=mp4&amp;pu=e59e796c&amp;v=tx&amp;pp=ChMxNDAxNjIzODY1NzM5NTc5MzkyGGMiC2ZlZWRfY2hvaWNlMhMxMzY5MDA1NjA4NTk5OTA0MjU3PXu830Q%3D&amp;pf=Web&amp;pt=zhihu)】
+
+> <video class="_1k7bcr7" preload="metadata" playsinline="" webkit-playsinline="" x-webkit-airplay="deny" src="https://vdn3.vzuu.com/HD/ea259b7e-cff6-11ef-b075-6e0de0aa0e6e-v8_f2_t1_ub9zZUlv.mp4?auth_key=1787227745-0-0-754ec0dccac8444121524775997f739e&amp;bu=09fd86c2&amp;c=avc.8.0&amp;disable_local_cache=1&amp;expiration=1787227745&amp;f=mp4&amp;pu=e59e796c&amp;v=tx&amp;pp=ChMxNDAxNjIzODY1NzM5NTc5MzkyGGMiC2ZlZWRfY2hvaWNlMhMxMzY5MDA1NjA4NTk5OTA0MjU3PXu830Q%3D&amp;pf=Web&amp;pt=zhihu" style="object-fit: contain;"></video>
+>
+> 视频：安装和启动easyfig
+
+---
+
+## 三、如何使用？【 针对完全没学过Python的同学，无脑使用界面即可】
+
+本工具独创UI界面向导，无需输入代码，即可完成仿真绘图！
+
+我们以学术论文：
+
+Yanliang Zhang, Jingrui Zhang, Yanjie Zhou, Huadong Zhao, Yanpei Cheng, Blockchain adoption and mode selection strategies for remanufacturing supply chain under cap-and-trade policy, Computers & Industrial Engineering, 192, 2024, 110246, [https://doi.org/10.1016/j.cie.2024.110246](https://doi.org/10.1016/j.cie.2024.110246).
+
+为例，进行演示。
+
+作者提出了四种模式，利润函数分别为：
+$$
+\begin{equation} \pi_r^{NW}=E p_{e} + \frac{k \left(\alpha \delta \left(c_{n} + e_{n} p_{e}\right) - c_{r} - e_{r} p_{e}\right)^{2}}{8 \left(\alpha \delta \left(- \alpha \delta + 1\right) + k\right)^{2}}\tag{1} \end{equation}
+$$
+
+$$
+\begin{equation} \pi_r^{BW}=E p_{e} + \frac{k \left(- b - c_{r} + \delta \left(c_{n} + e_{n} p_{e}\right) - e_{r} p_{e}\right)^{2}}{8 \left(- \delta^{2} + \delta + k\right)^{2}}\tag{2} \end{equation}
+$$
+
+$$
+\begin{equation} \pi_r^{NS}=E p_{e} + \frac{\left(2 \alpha \delta + k\right) \left(\alpha \delta \left(c_{n} + e_{n} p_{e}\right) - c_{r} - e_{r} p_{e}\right)^{2}}{8 \left(\alpha \delta \left(- \alpha \delta + 2\right) + k\right)^{2}}\tag{3} \end{equation}
+$$
+
+$$
+\begin{equation} \pi_r^{BS}=E p_{e} + \frac{\left(2 \delta + k\right) \left(- b - c_{r} + \delta \left(c_{n} + e_{n} p_{e}\right) - e_{r} p_{e}\right)^{2}}{8 \left(- \delta^{2} + 2 \delta + k\right)^{2}}\tag{4} \end{equation}
+$$
+
+参数默认赋值为：
+
+![img](https://picx.zhimg.com/80/v2-83657c702ca10f0a78799341f48eabe8_1440w.png?source=ccfced1a)
+
+### 3.1 表达式快速输入的技巧
+
+首先，在“表达式输入”框中，输入四个表达式，格式为：
+
+```
+表达式名称 = 表达式
+```
+
+其中，`表达式名称`可以写单词、汉字以及空格，也可以写LaTex形式（**LaTeX部分的两侧需要用\$包裹**）。例如：“模式A”、“\$Mode_A\$”、“利润 \$\pi_r^{NW}\$”等。**比较随意，表达式名称决定了图例是啥**。对于LaTex的写法，请见**附录A**。
+
+`表达式`**书写要求：**
+
+（1）数学符号只能由英文字母、下划线（表示下角标）和数字组成，并且数字不能开头，希腊字母写对应的英文单词（**千万注意不是LaTeX！**），特别地， λ **要写为“lamda”**。例如：“p_e”、“alpha”、“q_2”等，特殊符号可以点击界面上的“ Ω... ”按钮键入；
+
+（2）运算符号写法：加为`+`，减为`-`，乘为`*`，除为`/`，注意次方写成`^`或`**`都可以，优先运算用小括号`()`。可以看出，这和我们平时正常书写公式没啥太大区别。
+
+> ![img](https://picx.zhimg.com/80/v2-4eaf81c78b291f973beb86e22dfe2598_1440w.png?source=ccfced1a)
+>
+> 图：打开符号面板
+
+下面是一组正确的示范：
+
+```
+$\pi_r^{NW}$ = E*p_e+(k*(alpha*delta*(c_n+e_n*p_e)-(c_r+e_r*p_e))^2)/(8*(k+alpha*delta*(1-alpha*delta))^2)
+Hollow word = E*p_e + ( k*(delta*(c_n+e_n*p_e)-(c_r+e_r*p_e+b))^2 )/( 8*(k+delta-delta^2)^2)
+NS下的利润$\pi$ = E*p_e + ((k+2*alpha*delta)*(alpha*delta*(c_n+e_n*p_e)-(c_r+e_r*p_e))^2 )/( 8*(k+alpha*delta*(2-alpha*delta))^2)
+这个工具 yyds = E*p_e + ( (k+2*delta)*(delta*(c_n+e_n*p_e)-(c_r+e_r*p_e+b))^2 )/( 8*(k+2*delta-delta^2)^2)
+```
+
+**对于特别长的公式，尤其括号嵌套特别多时，手写公式很痛苦！好在easyfig给我们提供了工具！**点击界面上的“打开LaTeX转换器”，即可进入该工具。**注意：该工具只负责转换"="的右边部分！"="左边需要用户自己起名。**
+
+（1）对于Mathtype输入的Word公式，需要选择“通用LaTex”选项，输入LaTex代码，点击“转换”即可。注意：第一次使用，后台会安装插件，安装好后，会提示“安装\`antlr4-python3-runtime==4.xx\`成功，请重新启动easyfig即可!”，按照要求，重启easyfig即可。
+
+（2）对于Mathematica的结果，右键选择“复制为”，点击“LaTeX”，类似地，将内容粘贴到输入框中，但要选择“Mathematica LaTex”，点击“转换”，复制结果即可。
+
+> ![img](https://pica.zhimg.com/80/v2-e58ff42e038247146d4376da58635d0e_1440w.png?source=ccfced1a)
+>
+> 图：Mathematica LaTex
+
+为了方便大家理解，关于上述功能的视频演示如下（2.0.0版本，新版本操作一样，增加了matlab代码转sympy的功能）：【或者[点击此处播放](https://vdn3.vzuu.com/HD/cdd987d6-cff7-11ef-8e3b-fe5fec143453-v8_f2_t1_Hxye2XeN.mp4?auth_key=1787227745-0-0-697a04c7d93bd0156c0a492e420c70ce&amp;bu=09fd86c2&amp;c=avc.8.0&amp;disable_local_cache=1&amp;expiration=1787227745&amp;f=mp4&amp;pu=e59e796c&amp;v=tx&amp;pp=ChMxNDAxNjIzODY1NzM5NTc5MzkyGGMiC2ZlZWRfY2hvaWNlMhMxMzY5MDA1NjA4NTk5OTA0MjU3PXu830Q%3D&amp;pf=Web&amp;pt=zhihu)】
+
+> <video class="_1k7bcr7" preload="metadata" playsinline="" webkit-playsinline="" x-webkit-airplay="deny" src="https://vdn3.vzuu.com/HD/cdd987d6-cff7-11ef-8e3b-fe5fec143453-v8_f2_t1_Hxye2XeN.mp4?auth_key=1787227745-0-0-697a04c7d93bd0156c0a492e420c70ce&amp;bu=09fd86c2&amp;c=avc.8.0&amp;disable_local_cache=1&amp;expiration=1787227745&amp;f=mp4&amp;pu=e59e796c&amp;v=tx&amp;pp=ChMxNDAxNjIzODY1NzM5NTc5MzkyGGMiC2ZlZWRfY2hvaWNlMhMxMzY5MDA1NjA4NTk5OTA0MjU3PXu830Q%3D&amp;pf=Web&amp;pt=zhihu" style="object-fit: contain;"></video>
+>
+> 视频：如何快速输入公式？借助转换工具
+
+### 3.2 单参数数值分析
+
+单参数数值分析需要在“绘制仿真折线图”界面中进行。输入公式完成后，点击“公式识别”，当下面的运行信息显示“公式识别成功！”时，进行下一步：分析参数选取。具体操作请看我演示视频：【或者[点击此处播放](https://vdn3.vzuu.com/HD/ae89b958-cff9-11ef-9fe3-360077e0e5a0-v8_f2_t1_2W9aMLGn.mp4?auth_key=1787227745-0-0-aff00d7063cbc378b70d72f7ddaa8ef2&amp;bu=09fd86c2&amp;c=avc.8.0&amp;disable_local_cache=1&amp;expiration=1787227745&amp;f=mp4&amp;pu=e59e796c&amp;v=tx&amp;pp=ChMxNDAxNjIzODY1NzM5NTc5MzkyGGMiC2ZlZWRfY2hvaWNlMhMxMzY5MDA1NjA4NTk5OTA0MjU3PXu830Q%3D&amp;pf=Web&amp;pt=zhihu)】
+
+> <video class="_1k7bcr7" preload="metadata" playsinline="" webkit-playsinline="" x-webkit-airplay="deny" src="https://vdn3.vzuu.com/HD/ae89b958-cff9-11ef-9fe3-360077e0e5a0-v8_f2_t1_2W9aMLGn.mp4?auth_key=1787227745-0-0-aff00d7063cbc378b70d72f7ddaa8ef2&amp;bu=09fd86c2&amp;c=avc.8.0&amp;disable_local_cache=1&amp;expiration=1787227745&amp;f=mp4&amp;pu=e59e796c&amp;v=tx&amp;pp=ChMxNDAxNjIzODY1NzM5NTc5MzkyGGMiC2ZlZWRfY2hvaWNlMhMxMzY5MDA1NjA4NTk5OTA0MjU3PXu830Q%3D&amp;pf=Web&amp;pt=zhihu" style="object-fit: contain;"></video>
+>
+> 视频：单参数数值曲线外观设置
+
+**文件的保存与打开**：easyfig支持将设定好的图像数据保存。点击“保存...”，可以以.py或.txt的格式将你的画图数据保存下来；当以后想修改这个画图时，点击“打开...”，选择你之前保存的.py或.txt文件，即可恢复之前的工作。具体操作请见视频演示：【或者[点击此处播放](https://vdn6.vzuu.com/HD/23b5c49c-cffa-11ef-96de-16b14928db12-v8_f2_t1_FjAFE1qz.mp4?pkey=AAX0xFvkAjl91OXXs7i4mXjscpUarJUCACQUq2mb0cbUjclQVh6KEWY2Pb-C_tJX3g0-8SpfcK8hyCunREVpmt6d&amp;bu=09fd86c2&amp;c=avc.8.0&amp;expiration=1787231345&amp;f=mp4&amp;pu=e59e796c&amp;v=ks6&amp;pp=ChMxNDAxNjIzODY1NzM5NTc5MzkyGGMiC2ZlZWRfY2hvaWNlMhMxMzY5MDA1NjA4NTk5OTA0MjU3PXu830Q%3D&amp;pf=Web&amp;pt=zhihu)】
+
+> <video class="_1k7bcr7" preload="metadata" playsinline="" webkit-playsinline="" x-webkit-airplay="deny" src="https://vdn6.vzuu.com/HD/23b5c49c-cffa-11ef-96de-16b14928db12-v8_f2_t1_FjAFE1qz.mp4?pkey=AAX0xFvkAjl91OXXs7i4mXjscpUarJUCACQUq2mb0cbUjclQVh6KEWY2Pb-C_tJX3g0-8SpfcK8hyCunREVpmt6d&amp;bu=09fd86c2&amp;c=avc.8.0&amp;expiration=1787231345&amp;f=mp4&amp;pu=e59e796c&amp;v=ks6&amp;pp=ChMxNDAxNjIzODY1NzM5NTc5MzkyGGMiC2ZlZWRfY2hvaWNlMhMxMzY5MDA1NjA4NTk5OTA0MjU3PXu830Q%3D&amp;pf=Web&amp;pt=zhihu" style="object-fit: contain;"></video>
+>
+> 视频：保存与打开操作
+
+### 3.3 双参数分析-最优模式分析
+
+具体请看视频演示：【或者[点击此处播放](https://vdn6.vzuu.com/HD/fada60c2-cffa-11ef-bd0d-32480b71c768-v8_f2_t1_9k2wSS1p.mp4?pkey=AAXjiCsAonumZOXxk9BUpkixThXv4aIbpYeTIAp02TTOwm5Eb7Czj5CdoTgckhKvJMMxVms3cLjq3G_IkoEyQEpX&amp;bu=09fd86c2&amp;c=avc.8.0&amp;expiration=1787231345&amp;f=mp4&amp;pu=e59e796c&amp;v=ks6&amp;pp=ChMxNDAxNjIzODY1NzM5NTc5MzkyGGMiC2ZlZWRfY2hvaWNlMhMxMzY5MDA1NjA4NTk5OTA0MjU3PXu830Q%3D&amp;pf=Web&amp;pt=zhihu)】
+
+> <video class="_1k7bcr7" preload="metadata" playsinline="" webkit-playsinline="" x-webkit-airplay="deny" src="https://vdn6.vzuu.com/HD/fada60c2-cffa-11ef-bd0d-32480b71c768-v8_f2_t1_9k2wSS1p.mp4?pkey=AAXjiCsAonumZOXxk9BUpkixThXv4aIbpYeTIAp02TTOwm5Eb7Czj5CdoTgckhKvJMMxVms3cLjq3G_IkoEyQEpX&amp;bu=09fd86c2&amp;c=avc.8.0&amp;expiration=1787231345&amp;f=mp4&amp;pu=e59e796c&amp;v=ks6&amp;pp=ChMxNDAxNjIzODY1NzM5NTc5MzkyGGMiC2ZlZWRfY2hvaWNlMhMxMzY5MDA1NjA4NTk5OTA0MjU3PXu830Q%3D&amp;pf=Web&amp;pt=zhihu" style="object-fit: contain;"></video>
+>
+> 视频：双参数分析-最优模式分析
+
+### 3.4 双参数分析-详细区域分析
+
+请看视频演示：【或者[点击此处播放](https://vdn6.vzuu.com/HD/97e962b8-cffc-11ef-b938-fe5fec143453-v8_f2_t1_0retzLUs.mp4?pkey=AAUOMk-Aloj9Xu834KSog8pkJ2PiO6ylaSa3CxhadBNUULjY5RsYY2M3gbr-KdNrhJpJql-4pDzWqCcCzS3mWhvS&amp;bu=09fd86c2&amp;c=avc.8.0&amp;expiration=1787231345&amp;f=mp4&amp;pu=e59e796c&amp;v=ks6&amp;pp=ChMxNDAxNjIzODY1NzM5NTc5MzkyGGMiC2ZlZWRfY2hvaWNlMhMxMzY5MDA1NjA4NTk5OTA0MjU3PXu830Q%3D&amp;pf=Web&amp;pt=zhihu)】
+
+> <video class="_1k7bcr7" preload="metadata" playsinline="" webkit-playsinline="" x-webkit-airplay="deny" src="https://vdn6.vzuu.com/HD/97e962b8-cffc-11ef-b938-fe5fec143453-v8_f2_t1_0retzLUs.mp4?pkey=AAUOMk-Aloj9Xu834KSog8pkJ2PiO6ylaSa3CxhadBNUULjY5RsYY2M3gbr-KdNrhJpJql-4pDzWqCcCzS3mWhvS&amp;bu=09fd86c2&amp;c=avc.8.0&amp;expiration=1787231345&amp;f=mp4&amp;pu=e59e796c&amp;v=ks6&amp;pp=ChMxNDAxNjIzODY1NzM5NTc5MzkyGGMiC2ZlZWRfY2hvaWNlMhMxMzY5MDA1NjA4NTk5OTA0MjU3PXu830Q%3D&amp;pf=Web&amp;pt=zhihu" style="object-fit: contain;"></video>
+>
+> 视频：双参数分析-详细区域分析
+
+### 3.5 双参数分析-三维图分析
+
+请看视频演示：【或者[点击此处播放](https://vdn6.vzuu.com/HD/534e7ee4-cffd-11ef-8143-22248896a882-v8_f2_t1_bKALETgd.mp4?pkey=AAWrAjy-g84aFusZ85qHYX-4VkB8noYBWBysnUnKN1NygkQGmlytGOx1yZjB5dIt02THc5WWQiFemVuU17g-2JkP&amp;bu=09fd86c2&amp;c=avc.8.0&amp;expiration=1787231345&amp;f=mp4&amp;pu=e59e796c&amp;v=ks6&amp;pp=ChMxNDAxNjIzODY1NzM5NTc5MzkyGGMiC2ZlZWRfY2hvaWNlMhMxMzY5MDA1NjA4NTk5OTA0MjU3PXu830Q%3D&amp;pf=Web&amp;pt=zhihu)】
+
+> <video class="_1k7bcr7" preload="metadata" playsinline="" webkit-playsinline="" x-webkit-airplay="deny" src="https://vdn6.vzuu.com/HD/534e7ee4-cffd-11ef-8143-22248896a882-v8_f2_t1_bKALETgd.mp4?pkey=AAWrAjy-g84aFusZ85qHYX-4VkB8noYBWBysnUnKN1NygkQGmlytGOx1yZjB5dIt02THc5WWQiFemVuU17g-2JkP&amp;bu=09fd86c2&amp;c=avc.8.0&amp;expiration=1787231345&amp;f=mp4&amp;pu=e59e796c&amp;v=ks6&amp;pp=ChMxNDAxNjIzODY1NzM5NTc5MzkyGGMiC2ZlZWRfY2hvaWNlMhMxMzY5MDA1NjA4NTk5OTA0MjU3PXu830Q%3D&amp;pf=Web&amp;pt=zhihu" style="object-fit: contain;"></video>
+>
+> 视频：双参数分析-三维图分析
+
+---
+
+## 四、Easyfig高阶用法【针对Python编程同学，作为Python第三方包编程使用】
+
+推荐用Jupyter，可以直接编程使用，能够更细致地设置图片细节。
 
 ```python
 from easyfig import *   # 固定写法
 %config InlineBackend.figure_format = 'retina' # 在 Jupyter 中显示高清图片
+
+# 如果想快速上手，推荐使用make_example()函数生成示例代码，直接修改！
+make_example("data_lines")
 ```
 
-### 2.1 根据数据绘制曲线（该功能界面向导版没有）
-
+### 4.1 根据数据绘制曲线【data_lines函数】
 
 ```python
 # 以方括号（列表、numpy数组均可）形式给出数据，并给这组数据起个名字：
@@ -98,14 +267,13 @@ plt = data_lines(data, label_x=label_x, x_name=x_name, y_name=y_name, save_dir=s
            linestyles=linestyles, linewidth=linewidth, markers=markers, markersize=markersize, colors=colors,
           isgrid=isgrid, xpad=xpad, ypad=ypad, xlabelpad=xlabelpad, ylabelpad=ylabelpad, 
             xlabelsize=xlabelsize, ylabelsize=ylabelsize, legendsize=legendsize)
+plt.title('旅游数据') # 还可以个性化加东西
+plt
 ```
 
+<img src="https://pic1.zhimg.com/80/v2-f6195f7bd0153728988a7018b58e0bf6_1440w.png?source=ccfced1a" alt="img" style="zoom: 50%;" />
 
-![png](https://pic3.zhimg.com/v2-4416be060ee29b77e00d2a573c366a16_r.jpg)
-
-
-### 2.2 数值仿真符号函数的曲线
-
+### 4.2 数值仿真符号函数的曲线【draw_lines函数】
 
 ```python
 # 定义符号 
@@ -188,14 +356,9 @@ draw_lines(expressions=expressions, assigns=assigns, the_var=the_var, ranges=ran
            xlabelsize=xlabelsize, ylabelsize=ylabelsize, legendsize=legendsize)
 ```
 
+<img src="https://picx.zhimg.com/80/v2-4f11d55eff6a90bf46c7655f8ae626f4_1440w.png?source=ccfced1a" alt="img" style="zoom: 50%;" />
 
-
-
-![png](https://picx.zhimg.com/v2-64a2347a6f7fe4499423e3653bf711cb_r.jpg)
-
-
-### 2.3 同时分析两个参数，绘制三维曲线
-
+### 4.3 同时分析两个参数，绘制三维曲线【draw_3D函数】
 
 ```python
 # 定义符号 
@@ -300,12 +463,9 @@ draw_3D(expressions=expressions, assigns=assigns, the_var_x=the_var_x, start_end
        xlabelsize=xlabelsize, ylabelsize=ylabelsize, zlabelsize=zlabelsize, legendsize=legendsize)
 ```
 
+<img src="https://pic1.zhimg.com/80/v2-207bb9d59c8f35e4940cf0b06573ceb4_1440w.png?source=ccfced1a" alt="img" style="zoom:50%;" />
 
-![png](https://pic3.zhimg.com/v2-d942b6b539e387c83b601d4433d6687e_r.jpg)
-
-
-### 2.4 基于最大利润的模式比较
-
+### 4.4 基于最大利润的模式比较【draw_max_area函数】
 
 ```python
 # 定义符号 
@@ -380,16 +540,9 @@ draw_max_area(expressions=expressions, assigns=assigns,
               pattern_moves=pattern_moves, xlabelpad=xlabelpad, ylabelpad=ylabelpad)
 ```
 
-    区域 0: 中心坐标 = [0.7671627089581086, 0.0634762952000335]
-    区域 1: 中心坐标 = [0.74544927 0.03695231]
-    区域 2: 中心坐标 = [0.7224541825812423, 0.07136930428315474]
+<img src="https://picx.zhimg.com/80/v2-73a1a71ffd7657f11f0378c9039aa3f4_1440w.png?source=ccfced1a" alt="img" style="zoom:50%;" />
 
-
-![png](https://picx.zhimg.com/v2-38fa3848d5dc77e4c27e6f8ce7b89e31_r.jpg)
-
-
-### 2.5 不同区域各个函数大小关系呈现
-
+### 4.5 不同区域各个函数大小关系呈现【draw_detail_area函数】
 
 ```python
 # 定义符号 
@@ -467,10 +620,144 @@ draw_detail_area(expressions=expressions, assigns=assigns,
               pattern_colors=pattern_colors, pattern_moves=pattern_moves, xlabelpad=xlabelpad, ylabelpad=ylabelpad)
 ```
 
-    区域 $\pi_r^{BW} > \pi_r^{BS} > \pi_r^{NS} > \pi_r^{NW}$: 中心坐标 = [0.71801738 0.03542176]
-    区域 $\pi_r^{BW} > \pi_r^{BS} > \pi_r^{NW} > \pi_r^{NS}$: 中心坐标 = [0.7522649316484371, 0.050000071576472446]
-    区域 $\pi_r^{NW} > \pi_r^{NS} > \pi_r^{BW} > \pi_r^{BS}$: 中心坐标 = [0.75467691 0.06691737]
-    区域 $\pi_r^{NS} > \pi_r^{NW} > \pi_r^{BW} > \pi_r^{BS}$: 中心坐标 = [0.72038526 0.07323454]
+<img src="https://pic1.zhimg.com/80/v2-fe7081df64749d15b517a61f48900c36_1440w.png?source=ccfced1a" alt="img" style="zoom:50%;" />
+
+---
+
+## 附录
+
+### A. 附录A: LaTeX的使用口诀
+
+> **下标下划线**，**上标冒尖尖**。 
+>
+> **希腊字母前**，**加上反斜线**。 
+>
+> **上下标字母多，花括号不能少**。  
+
+适用范围：“表达式输入”的等号**左侧**（同时也是**图例**）、“x轴名称”、“y轴名称”、“z轴名称”、最大值区域标注。**用“\$   \$”括起来的地方，系统会识别为LaTeX**，如图：
+
+![img](https://picx.zhimg.com/80/v2-5ea6f57da4fd4871681770a8ec0cbcdc_1440w.png?source=ccfced1a)
+
+![img](https://picx.zhimg.com/80/v2-9ca281a2cdc4c4e6b1b5f2786961d0ac_1440w.png?source=ccfced1a)
+
+![img](https://picx.zhimg.com/80/v2-1ecbb732574eb9c5639e5d84140acf95_1440w.png?source=ccfced1a)
+
+> **下标下划线（\_）**，**上标冒尖尖**（^）。 【例如：\$p_a\$ 对应 $p_a$ ,\$a^b\$ 对应 $a^b$】
+> 
+> **希腊字母前**（如alpha），**加上反斜线**（\\）。 【例如：\$\alpha_1\$ 对应 $\alpha_1$，\$\gamma\$ 对应 $\gamma$】
+> 
+> **上下标字母多，花括号不能少**。【例如：\$\alpha\_{ab}\$ 对应 $\alpha_{ab}$, \$A\_{12}^{cd}\$ 对应 $A_{12}^{cd}$】
+
+除了LaTeX需要注意外，还需要注意的是，如果坐标轴标注里想**换行**，在换行处直接打`\n`。例如：
+
+```
+$b$ \n (a) Parameter $b$
+```
+
+对应效果为：
+
+![img](https://pica.zhimg.com/80/v2-6c5a43f02c3f7b4f33ce55a002e35783_1440w.png?source=ccfced1a)
+
+### B. 附录B：颜色的表示
+
+![img](https://picx.zhimg.com/80/v2-e9f4dcd2b84b7a159011000ff185f98a_1440w.png?source=ccfced1a)
+
+针对需要进行颜色设置的地方，easyfig提供了颜色筛选器：
+
+![img](https://picx.zhimg.com/80/v2-f004e43717e2a954f7546b7310ac68c0_1440w.png?source=ccfced1a)
+
+当然，也可以输入特定颜色对应的单词去设置颜色，颜色及名称如下：
+
+![img](https://picx.zhimg.com/80/v2-5f9910351cd67a4193ee9fdd7e42b388_1440w.png?source=ccfced1a)
+
+![img](https://pic1.zhimg.com/80/v2-9c352749a9a644fb1aa65be668b833f2_1440w.png?source=ccfced1a)
+
+甚至，你还可以利用截图工具，例如[Snipaste](https://zh.snipaste.com/)等，获取某个颜色的16进制值，如`#e9ac7d` ，直接粘贴到颜色名称下拉列表框内，即可为所欲为地设置颜色啦~
+
+![img](https://picx.zhimg.com/80/v2-3e53fd470142698870a4f74250b81fca_1440w.png?source=ccfced1a)
+
+![img](https://pic1.zhimg.com/80/v2-dabd9e3cf548a68f304abad7ae7cdf1f_1440w.png?source=ccfced1a)
+
+### C. 附录C：线形的表示
+
+![img](https://pic1.zhimg.com/80/v2-c7e56411c20cb9d1c5df256d0d732c0d_1440w.png?source=ccfced1a)
+
+easyfig支持多种线形（线型），不局限于系统给出的下拉列表那些，用于可以自己输入。
+
+以下是一些常见的线形及其对应的表示：
+
+- '-'或'solid'：实线
+- '--'或'dashed'：虚线
+- ':'或'dotted'：点线
+- '-.'或'dashdot'：点划线
+- 'None'：无连接线，只显示标记
+- (0, (5, 10))：短虚线
+- (0, (10, 10))：长虚线
+- (0, (5, 10, 15, 10))：长短虚线
+- (0, (5, 10, 1, 10))：点划线
+- (0, (1, 1))：密集虚线
+- (0, (20, 10))：稀疏虚线
+- (5, (10, 10))：**偏移虚线**
+
+![img](https://pica.zhimg.com/80/v2-99be6a18e407ba2d9b7af2110935b7ea_1440w.png?source=ccfced1a)
+
+### D. 附录D：区域条纹的表示
+
+![img](https://picx.zhimg.com/80/v2-e12f4e2452613ab58f2af3e4223e66d0_1440w.png?source=ccfced1a)
+
+对于"绘制模式比较图"和"绘制关系区域图"功能，easyfig支持多种区域条纹形状。本系统支持的区域条纹及其效果如下：
+
+包括：
+
+```
+'xx', '--', '..', '||', '..', 'oo', '++', '**', '\\\\\\\\', '////', '-', 'x', '|', '.', 'o', '+', '*', '\\\\', '//', '---', 'xxx', '|||', '...', 'ooo', '+++', '***', '\\\\\\\\\\\\', '//////'。
+```
+
+![img](https://picx.zhimg.com/80/v2-1c155998b48b09776de1febdc10b9b4a_1440w.png?source=ccfced1a)
+
+![img](https://picx.zhimg.com/80/v2-89d799b03a8d208579bb21d6b8bc6817_1440w.png?source=ccfced1a)
+
+图案可重复使用以增加密度，例如\*\*、\*\*\*、\*\*\*\*\*。
+
+![img](https://pic1.zhimg.com/80/v2-ab8cb54014812759ac4253633bf86f11_1440w.png?source=ccfced1a)
+
+### E. 附录E：标记点形状
+
+![img](https://picx.zhimg.com/80/v2-245e124ef34f60555d8ae21600ce2d25_1440w.png?source=ccfced1a)
+
+对于"绘制仿真折线图"功能，easyfig支持多种标记点形状，例如，无标记点为None 。本系统支持的标记点及其效果如下：
+
+![img](https://pic1.zhimg.com/80/v2-232e8bdc82cd425a30078925f94ce55e_1440w.png?source=ccfced1a)
+
+![img](https://picx.zhimg.com/80/v2-0a35150035b535efb55ea1b7550a5223_1440w.png?source=ccfced1a)
+
+### F. 附录F：3D图的视角
+
+![img](https://pic1.zhimg.com/80/v2-bd831177af3449b72d9e425d98d7b11d_1440w.png?source=ccfced1a)
+
+- 仰角 (elevation)：定义了观察者与 xy 平面之间的夹角，也就是观察者与 xy 平面之间的旋转角度。当elevation为正值时，观察者向上倾斜，负值则表示向下倾斜。默认15度。可根据美观与否微调。
+- 方位角 (azimuth)：定义了观察者绕 z 轴旋转的角度。它决定了观察者在 xy 平面上的位置。azim 的角度范围是 −180 到 180 度，其中正值表示逆时针旋转，负值表示顺时针。默认45度。可根据美观与否微调。
+
+![img](https://picx.zhimg.com/80/v2-f5b038dfd8b4ff26eae9fce0e5866470_1440w.png?source=ccfced1a)
 
 
-![png](https://pica.zhimg.com/v2-03574f85a5fff05ce374098723d2809c_r.jpg)
+
+## 更新日志
+
+> 新版本2.5.0更新日志： 
+>
+> （1）修复了Mathematica分式/根式嵌套转换出错的Bug； 
+>
+> （2）增加Matlab代码转Sympy代码的功能； 
+>
+> （3）更改要分析的变量时，其他已赋值好的参数取值不变；
+>
+> （4）其他体验上的优化（如增大默认字号、默认保存双击即打开的文件）。
+>
+>  新版本3.7.0更新日志： 
+>
+> （1）data\_lines函数可在一张图中绘制长度不同的曲线。
+
+项目链接：https://github.com/Jesse-tien/Easyfig
+
+pip官方链接：https://pypi.org/project/easyfig/3.7.0/
